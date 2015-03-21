@@ -10,6 +10,8 @@ gem 'paperclip', '~> 4.2.1'
 gem 'cocoon', '~> 1.2.6'
 gem 'devise', '~> 3.4.1'
 
+gem 'rails_12factor', group: :production
+
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
