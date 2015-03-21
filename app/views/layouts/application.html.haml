@@ -27,3 +27,9 @@
     -flash.each do |name, msg|
       =content_tag :div, msg, class: 'alert'
     = yield
+
+  %footer.footer
+    .container
+      %p.text-muted.text-center
+        &copy;
+        = link_to "Richard Macias", "http://richardmacias.me"
