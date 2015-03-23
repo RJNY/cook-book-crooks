@@ -33,6 +33,8 @@ class RecipesController < ApplicationController
   end
 
   def destroy
+    p "*"*30
+    p @recipe
     @recipe.destroy
     redirect_to root_path, notice: "Successfully deleted recipe"
   end
@@ -47,4 +49,5 @@ class RecipesController < ApplicationController
   def find_recipe
     @recipe = Recipe.find(params[:id])
   end
+
 end
