@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   before_action :find_recipe, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :check_admin, only: [:edit]
+  before_action :check_admin, only: [:show]
   def index
     @recipes = Recipe.all.order('created_at DESC')
   end
@@ -52,7 +52,7 @@ class RecipesController < ApplicationController
   end
 
   def check_admin
-    @admin ||= current_user == User.find_by(email: 'rjny86@gmail.com')
+    @admin = current_user == User.find_by(email: 'rjny86@gmail.com')
   end
 
 end
