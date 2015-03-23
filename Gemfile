@@ -9,7 +9,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'paperclip', '~> 4.2.1'
 gem 'cocoon', '~> 1.2.6'
 gem 'devise', '~> 3.4.1'
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '< 2.0'
 
 gem 'rails_12factor', group: :production
 
